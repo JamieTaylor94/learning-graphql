@@ -1,0 +1,22 @@
+[
+  { "name": "Arsenal", "stadium": "Emirates Stadium" },
+  { "name": "Aston Villa", "stadium": "Villa Park" },
+  { "name": "Brentford", "stadium": "Brentford Community Stadium" },
+  { "name": "Brighton & Hove Albion", "stadium": "American Express Community Stadium" },
+  { "name": "Burnley", "stadium": "Turf Moor" },
+  { "name": "Chelsea", "stadium": "Stamford Bridge" },
+  { "name": "Crystal Palace", "stadium": "Selhurst Park" },
+  { "name": "Everton", "stadium": "Goodison Park" },
+  { "name": "Leeds United", "stadium": "Ellend Road" },
+  { "name": "Leicester City", "stadium": "King Power Stadium" },
+  { "name": "Liverpool", "stadium": "Anfield" },
+  { "name": "Manchester City", "stadium": "Etihad Stadium" },
+  { "name": "Manchester United", "stadium": "Old Trafford" },
+  { "name": "Newcastle United", "stadium": "St James Park" },
+  { "name": "Norwich", "stadium": "Carrow Road" },
+  { "name": "Southampton", "stadium": "Saint Mary's" },
+  { "name": "Tottenham Hotspur", "stadium": "Tottenham Hotspur Stadium" },
+  { "name": "Watford", "stadium": "Vicarage Road" },
+  { "name": "West Ham United", "stadium": "London Stadium" },
+  { "name": "Wolverhampton Wanderers", "stadium": "Molineux" }
+]

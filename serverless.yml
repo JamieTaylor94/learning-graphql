@@ -1,0 +1,57 @@
+service: apollo-lambda
+provider:
+  name: aws
+  runtime: nodejs14.x
+  region: eu-west-1
+
+plugins:
+  - serverless-offline
+  - serverless-dynamodb-local
+
+  
+functions:
+  graphql:
+    handler: server/graphql.graphqlHandler
+    events:
+      - http:
+          path: /graphql
+          method: post
+          cors: true
+      - http:
+          path: /graphql
+          method: get
+          cors: true
+
+resources:
+  Resources:
+    DynamoDbTable:
+      Type: 'AWS::DynamoDB::Table'
+      DeletionPolicy: Retain
+      Properties:
+        AttributeDefinitions:
+          - AttributeName: 'name'
+            AttributeType: 'S'
+        KeySchema:
+          - AttributeName: 'name'
+            KeyType: 'HASH'
+        BillingMode: 'PAY_PER_REQUEST'
+        StreamSpecification:
+          StreamViewType: 'NEW_AND_OLD_IMAGES'
+        TableName: premierleague
+
+
+custom: 
+  dynamodb:
+    seed:
+      domain:
+        sources:
+          - table: premierleague
+            sources: [data/seed/teams.json]
+
+    start:
+      inMemory: true
+      migrate: true
+      seed: true
+    stages:
+      - dev
+     
